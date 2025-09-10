@@ -10,7 +10,7 @@ on:
   watch:
     types: started
   repository_dispatch:
-    types: sync-F1-Script
+    types: sync-TV-BOX-Script
 jobs:
   repo-sync:
     env:
@@ -22,11 +22,11 @@ jobs:
         with:
           persist-credentials: false
 
-      - name: sync F1-Script
+      - name: sync TV-BOX-Script
         uses: repo-sync/github-sync@v2
         if: env.PAT
         with:
           source_repo: "https://github.com/yuanwangokk-1/TV-BOX/tree/main/tvbox/pro.git"
           source_branch: "main"
-          destination_branch: "F1"
+          destination_branch: "TV-BOX"
           github_token: ${{ secrets.PAT }}
