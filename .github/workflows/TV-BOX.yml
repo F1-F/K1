@@ -49,7 +49,7 @@ jobs:
           git commit -m "Sync tvbox/pro from upstream at $(date '+%Y-%m-%d %H:%M:%S')"
 
           echo "=== 推送到 ${GITHUB_REPOSITORY} 的 TV-BOX 分支 ==="
-          git remote add dest https://x-access-token:${{ secrets.PAT }}@github.com/${{ github.repository }}
+          git remote add dest https://${{ github.actor }}:${{ secrets.PAT }}@github.com/${{ github.repository }}
 
           if git push --force dest TV-BOX; then
             echo "✅ 同步成功！"
