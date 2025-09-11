@@ -1,8 +1,7 @@
 ## 每隔3小时拉取一次作者脚本到自己仓库的分支
 
-
-
 name: F1-sync
+
 on:
   schedule:
     - cron: '6 */3 * * *'
@@ -11,22 +10,41 @@ on:
     types: started
   repository_dispatch:
     types: sync-TV-BOX-Script
+
 jobs:
   repo-sync:
-    env:
-      PAT: ${{ secrets.PAT }} 
     runs-on: ubuntu-latest
     if: github.event.repository.owner.id == github.event.sender.id
+    env:
+      PAT: ${{ secrets.PAT }}
+      jobs:
+  repo-sync:
+    runs-on: ubuntu-latest
+    if: github.event.repository.owner.id == github.event.sender.id
+    env:
+      PAT: ${{ secrets.PAT }}
+
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout self
+        uses: actions/checkout@v4
         with:
           persist-credentials: false
 
-      - name: sync TV-BOX-Script
-        uses: repo-sync/github-sync@v2
-        if: env.PAT
-        with:
-          source_repo: "https://github.com/yuanwangokk-1/TV-BOX/tree/main/tvbox/pro.git"
-          source_branch: "main"
-          destination_branch: "TV-BOX"
-          github_token: ${{ secrets.PAT }}
+      - name: Clone subdirectory (tvbox/pro) only
+        run: |
+          git clone --depth 1 --filter=blob:none --sparse https://github.com/yuanwangokk-1/TV-BOX source
+          cd source
+          git sparse-checkout set tvbox/pro
+          ls -R tvbox/pro
+          - name: Push to my repo branch
+        run: |
+          cd source
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git init
+          git checkout -b TV-BOX
+          git add tvbox/pro
+          git commit -m "sync tvbox/pro from upstream"
+          git remote add dest https://x-access-token:${{ secrets.PAT }}@github.com/${{ github.repository }}
+          git push --force dest TV-BOX
+
