@@ -2,8 +2,10 @@ name: F1-sync
 
 on:
   schedule:
-    - cron: '6 0 * * *'   # 每天 0:06 执行一次
+    - cron: '6 */3 * * *'   # 每隔3小时执行一次
   workflow_dispatch:         # 手动触发
+  watch:
+    types: started           # 关注触发
   repository_dispatch:
     types: sync-TV-BOX-Script
 
@@ -20,32 +22,19 @@ jobs:
         with:
           persist-credentials: false
 
-      # === GitHub 上游 TV-BOX 同步 ===
-      - name: Check GitHub upstream latest commit
-        id: check_github
+      - name: Clone only tvbox/pro from upstream
         run: |
-          echo "=== 检查 GitHub 上游最新提交 ==="
-          if ! hash=$(git ls-remote https://github.com/yuanwangokk-1/TV-BOX HEAD | awk '{print $1}'); then
-            echo "skip=true" >> $GITHUB_OUTPUT
-            exit 0
-          fi
-          echo "hash=$hash" >> $GITHUB_OUTPUT
-
-      - name: Sync GitHub upstream if changed
-        if: steps.check_github.outputs.skip != 'true'
-        run: |
-          hash=${{ steps.check_github.outputs.hash }}
-          mkdir -p .sync-hash
-          if [ -f .sync-hash/github.hash ] && [ "$(cat .sync-hash/github.hash)" = "$hash" ]; then
-            echo "⚠️ GitHub 上游无更新，跳过"
-            exit 0
-          fi
-
-          echo "=== 开始克隆 GitHub 上游 ==="
+          echo "=== 开始克隆上游仓库 ==="
           git clone --depth 1 --filter=blob:none --sparse https://github.com/yuanwangokk-1/TV-BOX upstream
           cd upstream
           git sparse-checkout set tvbox/pro
+          echo "=== 上游 tvbox/pro 克隆完成 ==="
+          ls -R tvbox/pro
 
+      - name: Push tvbox/pro to my repo TV-BOX branch
+        run: |
+          echo "=== 开始准备推送到目标仓库 ==="
+          cd upstream
           mkdir repo
           mv tvbox/pro repo/
           cd repo
@@ -56,49 +45,14 @@ jobs:
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
 
           git add .
-          git commit -m "Sync tvbox/pro from GitHub upstream at $(date '+%Y-%m-%d %H:%M:%S')"
+          git commit -m "Sync tvbox/pro from upstream at $(date '+%Y-%m-%d %H:%M:%S')"
 
-          echo "=== 推送到 TV-BOX 分支 ==="
-          git remote add dest https://<你的GitHub用户名>:${PAT}@github.com/${{ github.repository }}
-          git push --force dest TV-BOX
+          echo "=== 推送到 ${GITHUB_REPOSITORY} 的 TV-BOX 分支 ==="
+          git remote add dest https://${{ github.actor }}:${{ secrets.PAT }}@github.com/${{ github.repository }}
 
-          echo "$hash" > ../../.sync-hash/github.hash
-
-      # === Gitee 上游 another-d 同步 ===
-      - name: Check Gitee upstream latest commit
-        id: check_gitee
-        run: |
-          echo "=== 检查 Gitee 上游最新提交 ==="
-          if ! hash=$(git ls-remote https://gitee.com/PizazzXS/another-d.git HEAD | awk '{print $1}'); then
-            echo "skip=true" >> $GITHUB_OUTPUT
-            exit 0
+          if git push --force dest TV-BOX; then
+            echo "✅ 同步成功！"
+          else
+            echo "❌ 同步失败，请检查 PAT 权限或仓库设置"
+            exit 1
           fi
-          echo "hash=$hash" >> $GITHUB_OUTPUT
-
-      - name: Sync Gitee upstream if changed
-        if: steps.check_gitee.outputs.skip != 'true'
-        run: |
-          hash=${{ steps.check_gitee.outputs.hash }}
-          mkdir -p .sync-hash
-          if [ -f .sync-hash/gitee.hash ] && [ "$(cat .sync-hash/gitee.hash)" = "$hash" ]; then
-            echo "⚠️ Gitee 上游无更新，跳过"
-            exit 0
-          fi
-
-          echo "=== 开始克隆 Gitee 上游 ==="
-          git clone --depth 1 https://gitee.com/PizazzXS/another-d.git gitee-upstream
-          cd gitee-upstream
-
-          git init
-          git checkout -b 潇洒
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-
-          git add .
-          git commit -m "Sync another-d from Gitee upstream at $(date '+%Y-%m-%d %H:%M:%S')"
-
-          echo "=== 推送到 潇洒 分支 ==="
-          git remote add dest https://<你的GitHub用户名>:${PAT}@github.com/${{ github.repository }}
-          git push --force dest 潇洒
-
-          echo "$hash" > ../.sync-hash/gitee.hash
