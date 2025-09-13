@@ -2,7 +2,7 @@ name: Sync-Gitee
 
 on:
   schedule:
-    - cron: '0 4 * * *'   # 每天凌晨4点执行一次
+    - cron: '0 4 * * *'   # 每天凌晨4点
   workflow_dispatch:       # 支持手动触发
   repository_dispatch:
     types: sync-gitee-only
@@ -24,6 +24,7 @@ jobs:
         id: gitee_latest
         run: |
           rm -rf temp-gitee || true
+          echo "Cloning Gitee master branch..."
           if git clone --depth 1 -b master https://gitee.com/PizazzXS/another-d.git temp-gitee; then
             cd temp-gitee
             GITEE_COMMIT=$(git rev-parse HEAD)
@@ -40,8 +41,10 @@ jobs:
           echo "=== 同步 Gitee 到 潇洒 分支 ==="
           rm -rf merged-gitee || true
           mkdir merged-gitee
+
+          # 复制 Gitee 仓库文件到 merged-gitee 根目录
           cp -r temp-gitee/* merged-gitee/
-          cp -r temp-gitee/.[!.]* merged-gitee/ || true  # 包括 .github 等隐藏文件
+          cp -r temp-gitee/.[!.]* merged-gitee/ || true  # 包括隐藏文件
 
           cd merged-gitee
           git init
@@ -59,6 +62,8 @@ jobs:
           fi
 
           git add .
+          
+          # 如果没有文件变化则跳过 commit 和 push
           if git diff --cached --quiet; then
             echo "⏩ 没有检测到文件变化，跳过提交和推送"
             exit 0
