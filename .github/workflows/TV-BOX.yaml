@@ -23,6 +23,7 @@ jobs:
       - name: Get GitHub latest commit
         id: github_latest
         run: |
+          rm -rf temp-github || true
           if git clone --depth 1 --filter=blob:none --sparse https://github.com/yuanwangokk-1/TV-BOX temp-github; then
             cd temp-github
             git sparse-checkout set tvbox/pro
@@ -39,7 +40,8 @@ jobs:
       - name: Get Gitee latest commit
         id: gitee_latest
         run: |
-          if git clone --depth 1 https://gitee.com/PizazzXS/another-d temp-gitee; then
+          rm -rf temp-gitee || true
+          if git clone --depth 1 https://gitee.com/PizazzXS/another-d.git temp-gitee; then
             cd temp-gitee
             GITEE_COMMIT=$(git rev-parse HEAD)
             echo "GITEE_COMMIT=$GITEE_COMMIT" >> $GITHUB_OUTPUT
@@ -77,6 +79,7 @@ jobs:
         if: steps.check_sync.outputs.sync_github == 'true'
         run: |
           echo "=== 同步 GitHub 到 TV-BOX 分支 ==="
+          rm -rf upstream-github merged-github || true
           git clone --depth 1 --filter=blob:none --sparse https://github.com/yuanwangokk-1/TV-BOX upstream-github
           cd upstream-github
           git sparse-checkout set tvbox/pro
@@ -84,12 +87,12 @@ jobs:
           cp -r tvbox/pro ../merged-github/tvbox_pro_github
           cd ../merged-github
           git init
-          git checkout -b TV-BOX
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git checkout -B TV-BOX
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
           git add .
           git commit -m "Sync GitHub(tvbox/pro:${{ steps.github_latest.outputs.GH_COMMIT }}) at $(date '+%Y-%m-%d %H:%M:%S')"
-          git remote add dest https://${{ github.actor }}:${{ secrets.PAT }}@github.com/${{ github.repository }}
+          git remote add dest https://${{ github.actor }}:${{ secrets.PAT }}@github.com/${{ github.repository }}.git
           git push --force dest TV-BOX
 
       # === 同步 Gitee 到 潇洒 分支（仅有更新时） ===
@@ -97,14 +100,15 @@ jobs:
         if: steps.check_sync.outputs.sync_gitee == 'true'
         run: |
           echo "=== 同步 Gitee 到 潇洒 分支 ==="
-          git clone --depth 1 https://gitee.com/PizazzXS/another-d upstream-gitee
+          rm -rf upstream-gitee merged-gitee || true
+          git clone --depth 1 https://gitee.com/PizazzXS/another-d.git upstream-gitee
           mkdir merged-gitee
           cp -r upstream-gitee merged-gitee/another-d
           cd merged-gitee
           git init
-          git checkout -b 潇洒
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git checkout -B 潇洒
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
 
           # 更新 CHANGELOG.md，最新记录置顶
           CHANGELOG_FILE="CHANGELOG.md"
@@ -117,11 +121,11 @@ jobs:
 
           git add .
           git commit -m "Sync Gitee(another-d:${{ steps.gitee_latest.outputs.GITEE_COMMIT }}) at $(date '+%Y-%m-%d %H:%M:%S')"
-          git remote add dest https://${{ github.actor }}:${{ secrets.PAT }}@github.com/${{ github.repository }}
+          git remote add dest https://${{ github.actor }}:${{ secrets.PAT }}@github.com/${{ github.repository }}.git
           git push --force dest 潇洒
 
       # === 更新本次同步 commit ===
       - name: Update last sync record
         if: steps.check_sync.outputs.sync_github == 'true' || steps.check_sync.outputs.sync_gitee == 'true'
         run: |
-          echo "${{ steps.github_latest.outputs.GH_COMMIT }} ${{ steps.gitee_latest.outputs.GITEE_COMMIT }}" > .last_sync
+          echo "${{ steps.github_latest.outputs
