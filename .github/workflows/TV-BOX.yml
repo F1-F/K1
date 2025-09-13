@@ -11,7 +11,7 @@ jobs:
   repo-sync:
     runs-on: ubuntu-latest
     env:
-    PAT: ${{ secrets.PAT }}
+        PAT: ${{ secrets.PAT }}
 
     steps:
       - name: Checkout self
@@ -34,7 +34,7 @@ jobs:
       - name: Clone another-d from Gitee upstream
         run: |
         echo "=== 开始克隆 Gitee another-d 仓库 ==="
-          if git clone --depth 1 https://gitee.com/PizazzXS/another-d upstream-gitee; then
+        if git clone --depth 1 https://gitee.com/PizazzXS/another-d upstream-gitee; then
             cd upstream-gitee
             echo "=== Gitee 上游 latest commit ==="
             git log -1 --format="%H %s (%ci)"
