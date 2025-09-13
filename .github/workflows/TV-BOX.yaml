@@ -24,7 +24,7 @@ jobs:
         id: github_latest
         run: |
           rm -rf temp-github || true
-          if git clone --depth 1 --filter=blob:none --sparse https://github.com/yuanwangokk-1/TV-BOX temp-github; then
+          if git clone --depth 1 --filter=blob:none --sparse https://github.com/yuanwangokk-1/TV-BOX.git temp-github; then
             cd temp-github
             git sparse-checkout set tvbox/pro
             GH_COMMIT=$(git rev-parse HEAD)
@@ -41,7 +41,7 @@ jobs:
         id: gitee_latest
         run: |
           rm -rf temp-gitee || true
-          if git clone --depth 1 https://gitee.com/PizazzXS/another-d.git temp-gitee; then
+          if git clone --depth 1 -b master https://gitee.com/PizazzXS/another-d.git temp-gitee; then
             cd temp-gitee
             GITEE_COMMIT=$(git rev-parse HEAD)
             echo "GITEE_COMMIT=$GITEE_COMMIT" >> $GITHUB_OUTPUT
@@ -80,7 +80,7 @@ jobs:
         run: |
           echo "=== 同步 GitHub 到 TV-BOX 分支 ==="
           rm -rf upstream-github merged-github || true
-          git clone --depth 1 --filter=blob:none --sparse https://github.com/yuanwangokk-1/TV-BOX upstream-github
+          git clone --depth 1 --filter=blob:none --sparse https://github.com/yuanwangokk-1/TV-BOX.git upstream-github
           cd upstream-github
           git sparse-checkout set tvbox/pro
           mkdir ../merged-github
@@ -101,7 +101,7 @@ jobs:
         run: |
           echo "=== 同步 Gitee 到 潇洒 分支 ==="
           rm -rf upstream-gitee merged-gitee || true
-          git clone --depth 1 https://gitee.com/PizazzXS/another-d.git upstream-gitee
+          git clone --depth 1 -b master https://gitee.com/PizazzXS/another-d.git upstream-gitee
           mkdir merged-gitee
           cp -r upstream-gitee merged-gitee/another-d
           cd merged-gitee
@@ -128,4 +128,4 @@ jobs:
       - name: Update last sync record
         if: steps.check_sync.outputs.sync_github == 'true' || steps.check_sync.outputs.sync_gitee == 'true'
         run: |
-          echo "${{ steps.github_latest.outputs
+          echo "${{ steps.github_latest.outputs.GH_COMMIT }} ${{ steps.gitee_latest.outputs.GITEE_COMMIT }}" > .last_sync
