@@ -19,6 +19,14 @@ jobs:
         with:
           persist-credentials: false
 
+          # === 检查 PAT 是否配置 ===
+      - name: Verify PAT
+        run: |
+          if [ -z "${PAT}" ]; then
+            echo "❌ GitHub PAT 未配置"
+            exit 1
+          fi
+
           # === 获取 GitHub 最新 commit ===
       - name: Get GitHub latest commit
         id: github_latest
