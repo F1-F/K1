@@ -1,21 +1,17 @@
-## 每隔3小时拉取一次作者脚本到自己仓库的分支
 name: F1-sync
 
 on:
   schedule:
-    - cron: '6 */3 * * *'   # 每隔3小时执行一次
+    - cron: '0 3 * * *'     # 每天凌晨3点执行一次
   workflow_dispatch:         # 手动触发
-  watch:
-    types: started           # 关注触发
   repository_dispatch:
     types: sync-TV-BOX-Script
 
 jobs:
   repo-sync:
     runs-on: ubuntu-latest
-    if: github.event.repository.owner.id == github.event.sender.id
     env:
-      PAT: ${{ secrets.PAT }}
+    PAT: ${{ secrets.PAT }}
 
     steps:
       - name: Checkout self
@@ -23,40 +19,75 @@ jobs:
         with:
           persist-credentials: false
 
-      - name: Clone only tvbox/pro from upstream
+      # === GitHub 源 ===
+      - name: Clone only tvbox/pro from GitHub upstream
         run: |
-          echo "=== 开始克隆上游仓库 ==="
-          git clone --depth 1 --filter=blob:none --sparse https://github.com/yuanwangokk-1/TV-BOX upstream
-          cd upstream
+        echo "=== 开始克隆 GitHub 上游仓库 ==="
+          git clone --depth 1 --filter=blob:none --sparse https://github.com/yuanwangokk-1/TV-BOX upstream-github
+          cd upstream-github
           git sparse-checkout set tvbox/pro
-          echo "=== 上游 tvbox/pro 克隆完成 ==="
-          ls -R tvbox/pro
+          echo "=== GitHub 上游最新 commit ==="
+          git log -1 --format="%H %s (%ci)"
+          cd ..
 
-      - name: Push tvbox/pro to my repo TV-BOX branch
+      # === Gitee 源 ===
+      - name: Clone another-d from Gitee upstream
         run: |
-          echo "=== 开始准备推送到目标仓库 ==="
-          cd upstream
-          mkdir repo
-          mv tvbox/pro repo/
-          cd repo
+        echo "=== 开始克隆 Gitee another-d 仓库 ==="
+          if git clone --depth 1 https://gitee.com/PizazzXS/another-d upstream-gitee; then
+            cd upstream-gitee
+            echo "=== Gitee 上游 latest commit ==="
+            git log -1 --format="%H %s (%ci)"
+            cd ..
+          else
+            echo "⚠️ Gitee 仓库克隆失败，将忽略 Gitee 部分"
+            rm -rf upstream-gitee || true
+          fi
+          - name: Push merged sources to my repo TV-BOX branch (only if changed)
+        run: |
+          echo "=== 准备合并 GitHub 与 Gitee 的内容并推送 ==="
+          mkdir merged && cd merged
 
+          # 初始化目标 repo
           git init
           git checkout -b TV-BOX
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
 
+          # 从 GitHub 源复制
+          cp -r ../upstream-github/tvbox/pro ./tvbox_pro_github
+
+          # 从 Gitee 源复制（如果存在）
+          if [ -d ../upstream-gitee ]; then
+            cp -r ../upstream-gitee ./another-d
+          fi
+
           git add .
-          git commit -m "Sync tvbox/pro from upstream at $(date '+%Y-%m-%d %H:%M:%S')"
+
+          # 检查是否有实际改动
+          if git diff --cached --quiet; then
+            echo "⏩ 没有检测到文件变化，跳过提交和推送"
+            exit 0
+            fi
+
+          # 获取 commit id
+          GH_COMMIT=$(cd ../upstream-github && git log -1 --format="%H")
+          if [ -d ../upstream-gitee ]; then
+            GITEE_COMMIT=$(cd ../upstream-gitee && git log -1 --format="%H")
+          else
+            GITEE_COMMIT="N/A"
+          fi
+
+          COMMIT_MSG="Sync from GitHub(tvbox/pro:${GH_COMMIT}) + Gitee(another-d:${GITEE_COMMIT}) at $(date '+%Y-%m-%d %H:%M:%S')"
+          git commit -m "$COMMIT_MSG"
 
           echo "=== 推送到 ${GITHUB_REPOSITORY} 的 TV-BOX 分支 ==="
           git remote add dest https://${{ github.actor }}:${{ secrets.PAT }}@github.com/${{ github.repository }}
 
           if git push --force dest TV-BOX; then
             echo "✅ 同步成功！"
+            echo "$COMMIT_MSG"
           else
             echo "❌ 同步失败，请检查 PAT 权限或仓库设置"
             exit 1
           fi
-
-
-
