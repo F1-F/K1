@@ -35,20 +35,19 @@ jobs:
             exit 0
           fi
 
-      # === 同步 Gitee 到 潇洒 分支 ===
-      - name: Sync Gitee to 潇洒
+      # === 同步 Gitee 到 XS 分支 ===
+      - name: Sync Gitee to XS
         run: |
-          echo "=== 同步 Gitee 到 潇洒 分支 ==="
+          echo "=== 同步 Gitee 到 XS 分支 ==="
           rm -rf merged-gitee || true
           mkdir merged-gitee
 
-          # 复制 Gitee 仓库文件到 merged-gitee 根目录
-          cp -r temp-gitee/* merged-gitee/
-          cp -r temp-gitee/.[!.]* merged-gitee/ || true  # 包括隐藏文件
+          # 复制 Gitee 仓库文件到 merged-gitee 根目录（不带 .git）
+          rsync -a --exclude='.git' temp-gitee/ merged-gitee/
 
           cd merged-gitee
           git init
-          git checkout -B 潇洒
+          git checkout -B XS
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
@@ -71,4 +70,4 @@ jobs:
 
           git commit -m "Sync Gitee(another-d:${{ steps.gitee_latest.outputs.GITEE_COMMIT }}) at $(date '+%Y-%m-%d %H:%M:%S')"
           git remote add dest https://${{ github.actor }}:${{ secrets.PAT }}@github.com/${{ github.repository }}.git
-          git push --force dest 潇洒
+          git push --force dest XS
