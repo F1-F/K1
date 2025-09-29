@@ -1,1 +1,73 @@
+name: Sync-Gitee-6758
 
+on:
+  schedule:
+    - cron: '0 4 * * *'   # 每天凌晨4点
+  workflow_dispatch:       # 支持手动触发
+  repository_dispatch:
+    types: sync-gitee-only
+
+jobs:
+  gitee-sync:
+    runs-on: ubuntu-latest
+    env:
+      PAT: ${{ secrets.PAT }}
+
+    steps:
+      - name: Checkout self
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      # === 获取 Gitee 最新 commit ===
+      - name: Get Gitee latest commit
+        id: gitee_latest
+        run: |
+          rm -rf temp-gitee || true
+          echo "Cloning Gitee master branch..."
+          if git clone --depth 1 -b master https://gitee.com/yiwu369/6758.git temp-gitee; then
+            cd temp-gitee
+            GITEE_COMMIT=$(git rev-parse HEAD)
+            echo "GITEE_COMMIT=$GITEE_COMMIT" >> $GITHUB_OUTPUT
+            cd ..
+          else
+            echo "⚠️ Gitee 仓库克隆失败，退出"
+            exit 0
+          fi
+
+      # === 同步 Gitee 到 6758 分支 ===
+      - name: Sync Gitee to 6758
+        run: |
+          echo "=== 同步 Gitee 到 6758 分支 ==="
+          rm -rf merged-gitee || true
+          mkdir merged-gitee
+
+          # 复制 Gitee 仓库文件到 merged-gitee 根目录（不带 .git）
+          rsync -a --exclude='.git' temp-gitee/ merged-gitee/
+
+          cd merged-gitee
+          git init
+          git checkout -B 6758
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          # 更新 CHANGELOG.md，最新记录置顶
+          CHANGELOG_FILE="CHANGELOG.md"
+          NEW_ENTRY="* Sync Gitee(another-d:${{ steps.gitee_latest.outputs.GITEE_COMMIT }}) at $(date '+%Y-%m-%d %H:%M:%S')"
+          if [ -f "$CHANGELOG_FILE" ]; then
+            echo -e "$NEW_ENTRY\n$(cat $CHANGELOG_FILE)" > $CHANGELOG_FILE
+          else
+            echo "$NEW_ENTRY" > $CHANGELOG_FILE
+          fi
+
+          git add .
+          
+          # 如果没有文件变化则跳过 commit 和 push
+          if git diff --cached --quiet; then
+            echo "⏩ 没有检测到文件变化，跳过提交和推送"
+            exit 0
+          fi
+
+          git commit -m "Sync Gitee(another-d:${{ steps.gitee_latest.outputs.GITEE_COMMIT }}) at $(date '+%Y-%m-%d %H:%M:%S')"
+          git remote add dest https://${{ github.actor }}:${{ secrets.PAT }}@github.com/${{ github.repository }}.git
+          git push --force dest 6758
