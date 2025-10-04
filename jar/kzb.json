@@ -1,0 +1,10 @@
+{
+  "lives": [
+    {
+      "name": "快直播(py)",
+      "type": 3,
+      "api": "https://gitee.com/yiwu369/6758/raw/master/jar/kzb.py",
+      "ext": {}
+    }
+  ]
+}
