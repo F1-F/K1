@@ -1,4 +1,4 @@
- name: Sync Upstream to New Branch
+name: Sync Upstream to New Branch
 
 on:
   schedule:
