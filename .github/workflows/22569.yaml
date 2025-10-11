@@ -1,4 +1,4 @@
-name: Smart Sync Upstream with Update Check
+name: 22569
 
 on:
   schedule:
@@ -9,7 +9,7 @@ on:
       branch_name:
         description: '新分支名称'
         required: true
-        default: '比2256569'
+        default: '2256569'
         type: string
       force_sync:
         description: '强制同步（即使没有更新）'
@@ -132,7 +132,7 @@ jobs:
           git push --force origin main
           
           # 更新分支
-          NEW_BRANCH="${{ github.event.inputs.branch_name || '比2256569' }}"
+          NEW_BRANCH="${{ github.event.inputs.branch_name || '2256569' }}"
           if git show-ref --verify --quiet refs/heads/$NEW_BRANCH; then
             git checkout $NEW_BRANCH
             git reset --hard main
