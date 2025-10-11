@@ -1,0 +1,474 @@
+央视频道,#genre#
+CCTV1,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221226721/index.m3u8
+CCTV1,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221227209/index.m3u8
+CCTV1,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221226759/index.m3u8
+CCTV2,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221226711/index.m3u8
+CCTV2,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221227206/index.m3u8
+CCTV2,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221226853/index.m3u8
+CCTV3,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221227215/index.m3u8
+CCTV3,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221227402/index.m3u8
+CCTV4,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221226899/index.m3u8
+CCTV4,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221227324/index.m3u8
+CCTV4,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221226741/index.m3u8
+CCTV5,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221227218/index.m3u8
+CCTV5,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221227338/index.m3u8
+CCTV5+,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221226745/index.m3u8
+CCTV5+,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221227236/index.m3u8
+CCTV5+,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221226910/index.m3u8
+CCTV6,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221227221/index.m3u8
+CCTV6,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221227341/index.m3u8
+CCTV6,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221226199/index.m3u8
+CCTV7,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221227350/index.m3u8
+CCTV7,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221226905/index.m3u8
+CCTV8,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221227325/index.m3u8
+CCTV8,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221227466/index.m3u8
+CCTV8,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221226197/index.m3u8
+CCTV9,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221226734/index.m3u8
+CCTV9,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221227337/index.m3u8
+CCTV10,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221226702/index.m3u8
+CCTV10,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221227321/index.m3u8
+CCTV10,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221226792/index.m3u8
+CCTV11,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221226753/index.m3u8
+CCTV11,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221227251/index.m3u8
+CCTV12,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221226736/index.m3u8
+CCTV12,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221227343/index.m3u8
+CCTV12,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221226862/index.m3u8
+CCTV13,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221226729/index.m3u8
+CCTV13,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221227333/index.m3u8
+CCTV14,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221226720/index.m3u8
+CCTV14,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221227349/index.m3u8
+CCTV14,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221226789/index.m3u8
+CCTV15,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221226796/index.m3u8
+CCTV15,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221227361/index.m3u8
+CCTV16,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221227074/index.m3u8
+CCTV16,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221227346/index.m3u8
+CCTV17,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221226841/index.m3u8
+CCTV17,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221227352/index.m3u8
+CCTV17,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221226908/index.m3u8
+CCTV-第一剧场,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221227444/index.m3u8
+CCTV-风云剧场,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221227447/index.m3u8
+CCTV-风云音乐,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221227502/index.m3u8
+CCTV-风云足球,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221227377/index.m3u8
+CCTV-怀旧剧场,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221227499/index.m3u8
+CETV1,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221226732/index.m3u8
+卫视频道,#genre#
+安多卫视,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221227160/index.m3u8
+安徽卫视,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221226746/index.m3u8
+安徽卫视,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221227233/index.m3u8
+安徽卫视,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221226856/index.m3u8
+北京卫视,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221226724/index.m3u8
+北京卫视,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221227340/index.m3u8
+北京卫视,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221226823/index.m3u8
+兵团卫视,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221226859/index.m3u8
+东方卫视,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221226733/index.m3u8
+东方卫视,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221227212/index.m3u8
+东方卫视,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221226872/index.m3u8
+东南卫视,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221226784/index.m3u8
+东南卫视,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221227472/index.m3u8
+甘肃卫视,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221226875/index.m3u8
+广东卫视,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221226743/index.m3u8
+广东卫视,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221227318/index.m3u8
+广东卫视,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221226878/index.m3u8
+广西卫视,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221226830/index.m3u8
+广西卫视,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221227411/index.m3u8
+贵州卫视,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221226874/index.m3u8
+河北卫视,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221226774/index.m3u8
+河北卫视,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221227408/index.m3u8
+河南卫视,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221226791/index.m3u8
+河南卫视,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221227353/index.m3u8
+黑龙江卫视,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221226749/index.m3u8
+黑龙江卫视,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221227288/index.m3u8
+黑龙江卫视,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221226881/index.m3u8
+湖北卫视,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221226705/index.m3u8
+湖北卫视,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221227230/index.m3u8
+湖北卫视,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221226877/index.m3u8
+湖南卫视,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221226727/index.m3u8
+湖南卫视,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221227316/index.m3u8
+湖南卫视,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221226772/index.m3u8
+吉林卫视,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221227163/index.m3u8
+吉林卫视,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221227310/index.m3u8
+江苏卫视,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221226902/index.m3u8
+江苏卫视,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221227303/index.m3u8
+江苏卫视,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221226781/index.m3u8
+江西卫视,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221226788/index.m3u8
+江西卫视,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221227475/index.m3u8
+康巴卫视,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221227111/index.m3u8
+内蒙古卫视,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221226886/index.m3u8
+宁夏卫视,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221226804/index.m3u8
+农林卫视,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221227108/index.m3u8
+青海卫视,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221226889/index.m3u8
+厦门卫视,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221226803/index.m3u8
+山东教育卫视,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221227166/index.m3u8
+山东卫视,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221226739/index.m3u8
+山东卫视,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221227312/index.m3u8
+山东卫视,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221226887/index.m3u8
+山西卫视,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221226778/index.m3u8
+陕西卫视,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221226892/index.m3u8
+深圳卫视,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221226725/index.m3u8
+深圳卫视,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221227239/index.m3u8
+深圳卫视,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221226807/index.m3u8
+四川卫视,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221226728/index.m3u8
+四川卫视,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221227245/index.m3u8
+四川卫视,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221226810/index.m3u8
+天津卫视,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221226742/index.m3u8
+天津卫视,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221227306/index.m3u8
+天津卫视,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221226890/index.m3u8
+西藏卫视,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221226896/index.m3u8
+西藏卫视(藏语),http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221227157/index.m3u8
+新疆卫视,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221226893/index.m3u8
+延边卫视,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221227047/index.m3u8
+云南卫视,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221226816/index.m3u8
+云南卫视,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221227356/index.m3u8
+浙江卫视,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221226795/index.m3u8
+浙江卫视,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221227313/index.m3u8
+浙江卫视,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221226854/index.m3u8
+重庆卫视,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221226737/index.m3u8
+重庆卫视,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221227227/index.m3u8
+重庆卫视,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221226868/index.m3u8
+省内频道,#genre#
+辽宁卫视,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221226731/index.m3u8
+辽宁卫视,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221227242/index.m3u8
+辽宁卫视,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221226767/index.m3u8
+辽宁北方,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221226755/index.m3u8
+辽宁北方,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221227327/index.m3u8
+辽宁都市,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221226760/index.m3u8
+辽宁都市,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221227355/index.m3u8
+辽宁公共,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221226766/index.m3u8
+辽宁公共,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221227224/index.m3u8
+辽宁教育青少,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221226763/index.m3u8
+辽宁教育青少,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221227297/index.m3u8
+辽宁经济,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221226735/index.m3u8
+辽宁经济,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221227322/index.m3u8
+辽宁生活,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221226761/index.m3u8
+辽宁生活,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221227319/index.m3u8
+辽宁体育,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221226764/index.m3u8
+辽宁体育,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221227334/index.m3u8
+辽宁移动,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221226982/index.m3u8
+辽宁移动,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221227328/index.m3u8
+辽宁影视剧,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221226738/index.m3u8
+辽宁影视剧,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221227331/index.m3u8
+沈阳新闻综合,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221226895/index.m3u8
+沈阳新闻综合,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221227315/index.m3u8
+购物频道,#genre#
+家有购物,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221226985/index.m3u8
+聚鲨环球精选,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221227044/index.m3u8
+央广购物,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221227105/index.m3u8
+宜佳购物,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221226884/index.m3u8
+宜佳购物,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221227309/index.m3u8
+优购物,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221227335/index.m3u8
+卡通频道,#genre#
+嘉佳卡通,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221226744/index.m3u8
+金鹰卡通,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221226845/index.m3u8
+金鹰卡通,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221227300/index.m3u8
+新动漫,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221226818/index.m3u8
+优漫卡通,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221226768/index.m3u8
+其他频道,#genre#
+北京纪实科教,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221226730/index.m3u8
+家庭理财,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221226754/index.m3u8
+金鹰纪实,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221226714/index.m3u8
+金鹰纪实,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221227291/index.m3u8
+晴彩频道,#genre#
+睛彩广场舞,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221227423/index.m3u8
+睛彩竞技,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221227417/index.m3u8
+睛彩篮球,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221227478/index.m3u8
+睛彩青少,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221227420/index.m3u8
+咪咕视频,#genre#
+咪咕-睛彩广场舞,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221227384/index.m3u8
+咪咕-睛彩竞技,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221227436/index.m3u8
+咪咕-睛彩篮球,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221227439/index.m3u8
+咪咕-睛彩青少,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221227381/index.m3u8
+咪咕视频01,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221227308/index.m3u8
+咪咕视频02,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221227314/index.m3u8
+咪咕视频03,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221227317/index.m3u8
+咪咕视频04,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221227320/index.m3u8
+咪咕视频05,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221227323/index.m3u8
+咪咕视频06,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221227326/index.m3u8
+咪咕视频07,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221227366/index.m3u8
+咪咕视频08,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221227369/index.m3u8
+咪咕视频09,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221227372/index.m3u8
+咪咕视频10,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221227375/index.m3u8
+咪咕视频11,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221227378/index.m3u8
+咪咕视频12,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221227302/index.m3u8
+咪咕视频13,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221227299/index.m3u8
+咪咕视频14,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221227387/index.m3u8
+咪咕视频15,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221227390/index.m3u8
+咪咕视频16,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221227406/index.m3u8
+咪咕视频17,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221227409/index.m3u8
+咪咕视频18,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221227412/index.m3u8
+咪咕视频19,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221227427/index.m3u8
+咪咕视频20,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221227430/index.m3u8
+咪咕视频21,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221227433/index.m3u8
+咪咕视频22,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221227296/index.m3u8
+咪咕视频23,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221227293/index.m3u8
+咪咕视频24,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221227442/index.m3u8
+咪咕视频25,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221227445/index.m3u8
+咪咕视频26,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221227448/index.m3u8
+咪咕视频27,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221227451/index.m3u8
+咪咕视频28,http://39.135.126.62/hwottcdn.ln.chinamobile.com/PLTV/11/224/3221227305/index.m3u8
+
+🔞成人9+9⁺_0000,#genre#
+驚艷,http://15.204.105.50:25461/live/G2s9zK2n9m/xDtwVfWM8T/85.ts
+潘朵拉完美,http://15.204.105.50:25461/live/G2s9zK2n9m/xDtwVfWM8T/86.ts
+香蕉,http://15.204.105.50:25461/live/G2s9zK2n9m/xDtwVfWM8T/87.ts
+松視1台,http://15.204.105.50:25461/live/G2s9zK2n9m/xDtwVfWM8T/88.ts
+松視2台,http://15.204.105.50:25461/live/G2s9zK2n9m/xDtwVfWM8T/89.ts
+松視3台,http://15.204.105.50:25461/live/G2s9zK2n9m/xDtwVfWM8T/90.ts
+极限,http://applivewatermark.imfc.cn:80/live/dfb0ffc03f9f1f79deb6fe47a287f4fa.flv
+香蕉,http://applivewatermark.imfc.cn:80/live/be57c598136569437e3a44eff7863549.flv
+惊艳,http://applivewatermark.imfc.cn:80/live/3188c852a5fd96ce5ff6a46b1264381f.flv
+彩虹电影,http://applivewatermark.imfc.cn:80/live/1b5beef1849a7a6de52cb0413b68b91a.flv
+K频道,http://applivewatermark.imfc.cn:80/live/c2a94920138435f1e82706d84caae385.flv
+彩虹e,http://applivewatermark.imfc.cn:80/live/02ba8de8ed81d450de77ee651805b363.flv
+松视3,http://applivewatermark.imfc.cn:80/live/0dca2f0a283f9b503dac1cc5a3d80011.flv
+松视1,http://applivewatermark.imfc.cn:80/live/0f1d6961129341fbd17cc1e60ddf52a0.flv
+
+Redlight HD,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/242/index.m3u8
+Private TV,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/243/index.m3u8
+Hustler HD Europe,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/244/index.m3u8
+Dorcel TV HD,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/245/index.m3u8
+Playboy,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/527/index.m3u8
+Barely legal,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/871/index.m3u8
+BRAZZERS TV Europe 2,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/872/index.m3u8
+Brazzers TV Europe Россия,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/910/index.m3u8
+Blue Hustler,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/1064/index.m3u8
+FrenchLover,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/2160/index.m3u8
+O-la-la,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/2161/index.m3u8
+Vivid Red HD,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/2162/index.m3u8
+Exxxotica HD,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/2397/index.m3u8
+XXL,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/5009/index.m3u8
+Penthouse Passion,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/5010/index.m3u8
+Penthouse Gold HD,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/5011/index.m3u8
+Penthouse Quickies 1300k,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/5012/index.m3u8
+Penthouse Quickies HD,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/5013/index.m3u8
+Extasy 4K,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/5014/index.m3u8
+Eroxxx HD,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/5015/index.m3u8
+A3 Bikini,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/6165/index.m3u8
+Adult Time,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/6166/index.m3u8
+Anal Red TV,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/6167/index.m3u8
+Analized HD,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/6168/index.m3u8
+AST TV,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/6169/index.m3u8
+AST TV 2,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/6170/index.m3u8
+Babes HD,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/6171/index.m3u8
+Babes TV HD,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/6172/index.m3u8
+Bang Bros HD,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/6173/index.m3u8
+Bang!,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/6174/index.m3u8
+Big Ass Adult TV,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/6175/index.m3u8
+Big Dick Red TV,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/6176/index.m3u8
+Big Tits Adult TV,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/6177/index.m3u8
+Blacked HD,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/6178/index.m3u8
+Blowjob Red TV,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/6180/index.m3u8
+Brazzers eXXtra,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/6181/index.m3u8
+Brazzers HD,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/6182/index.m3u8
+Brunette Adult TV,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/6183/index.m3u8
+Cherry Pimps,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/6185/index.m3u8
+Club 17,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/6186/index.m3u8
+Compilation Adult TV,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/6187/index.m3u8
+Cuckold Red TV,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/6188/index.m3u8
+Cum Louder,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/6189/index.m3u8
+Cum4k,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/6190/index.m3u8
+Daughter Swap,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/6191/index.m3u8
+Day with a Pornstar,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/6192/index.m3u8
+DDF Busty,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/6193/index.m3u8
+DDF Network,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/6194/index.m3u8
+Digital Desire HD,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/6195/index.m3u8
+Digital Playground HD,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/6196/index.m3u8
+Dorcel Club,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/6197/index.m3u8
+Porn Angels,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/6198/index.m3u8
+Evil Angel HD,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/6199/index.m3u8
+Evolved Fights,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/6200/index.m3u8
+Extasy HD,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/6201/index.m3u8
+Fake Taxi HD,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/6202/index.m3u8
+Fap TV 2,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/6203/index.m3u8
+Fap TV 3,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/6204/index.m3u8
+Fap TV 4,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/6205/index.m3u8
+Fap TV Anal,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/6206/index.m3u8
+Fap TV BBW,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/6207/index.m3u8
+Fap TV Compilation,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/6208/index.m3u8
+Fap TV Lesbian,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/6209/index.m3u8
+Fap TV Parody,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/6210/index.m3u8
+Fap TV Teens,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/6211/index.m3u8
+FemJoy,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/6212/index.m3u8
+Fetish Red TV,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/6213/index.m3u8
+Gangbang Adult TV,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/6214/index.m3u8
+Gay Adult TV,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/6215/index.m3u8
+Got MYLF,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/6216/index.m3u8
+Hands on Hardcore,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/6217/index.m3u8
+Hard X,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/6218/index.m3u8
+Hardcore Red TV,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/6219/index.m3u8
+Hitzefrei HD,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/6220/index.m3u8
+Holed,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/6221/index.m3u8
+Hot and Mean,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/6222/index.m3u8
+Hot Guys Fuck,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/6223/index.m3u8
+Interracial Red TV,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/6224/index.m3u8
+Japan HDV,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/6225/index.m3u8
+Latina Red TV,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/6226/index.m3u8
+Lesbea,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/6227/index.m3u8
+Lesbian Red TV,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/6228/index.m3u8
+Lethal Hardcore,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/6229/index.m3u8
+Little Asians HD,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/6230/index.m3u8
+Live Cams Adult TV,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/6231/index.m3u8
+Lust Cinema,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/6232/index.m3u8
+MetArt HD,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/6233/index.m3u8
+MILF Red TV,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/6234/index.m3u8
+Monsters of Cock,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/6235/index.m3u8
+MYLF TV HD,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/6236/index.m3u8
+Naughty America,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/6237/index.m3u8
+Nubiles TV HD,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/6238/index.m3u8
+Pink Erotic 3,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/6240/index.m3u8
+Pink Erotic 4,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/6241/index.m3u8
+Playboy Plus,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/6242/index.m3u8
+Pornstar Red TV,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/6243/index.m3u8
+POV Adult TV,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/6244/index.m3u8
+Private HD,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/6245/index.m3u8
+Public Agent,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/6246/index.m3u8
+Reality Kings HD,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/6247/index.m3u8
+RK Prime,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/6248/index.m3u8
+RK TV,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/6249/index.m3u8
+Rough Adult TV,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/6250/index.m3u8
+Russian Adult TV,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/6251/index.m3u8
+Sex With Muslims,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/6252/index.m3u8
+SexArt,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/6253/index.m3u8
+Sext 6 senso,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/6254/index.m3u8
+SINematica,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/6255/index.m3u8
+Teen Red TV,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/6256/index.m3u8
+Threesome Red TV,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/6257/index.m3u8
+Tiny4K,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/6258/index.m3u8
+Trans Angels,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/6259/index.m3u8
+True Amateurs,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/6260/index.m3u8
+Tushy HD,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/6261/index.m3u8
+TushyRAW,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/6262/index.m3u8
+Visit-X TV,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/6263/index.m3u8
+Vivid TV Europe,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/6264/index.m3u8
+Vixen HD,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/6265/index.m3u8
+We Live Together,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/6266/index.m3u8
+White Boxxx,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/6267/index.m3u8
+Wicked,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/6268/index.m3u8
+Xpanded TV,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/6269/index.m3u8
+Balkan Erotic,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/6270/index.m3u8
+Bangerz,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/6271/index.m3u8
+Emanuelle HD,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/6272/index.m3u8
+HOT,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/6275/index.m3u8
+Hot Pleasure,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/6277/index.m3u8
+Playboy LA,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/6280/index.m3u8
+Red XXX,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/6281/index.m3u8
+Sexy Hot,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/6282/index.m3u8
+Venus,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/6284/index.m3u8
+X-MO,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/6285/index.m3u8
+XY Max HD,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/6286/index.m3u8
+Erotic,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/6289/index.m3u8
+Erotic 2,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/6290/index.m3u8
+Erotic 3,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/6291/index.m3u8
+Erotic 4,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/6292/index.m3u8
+Erotic 6,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/6293/index.m3u8
+Erotic 7,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/6294/index.m3u8
+Erotic 8,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/6295/index.m3u8
+Erox HD,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/6296/index.m3u8
+SuperOne HD,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/6298/index.m3u8
+Dorcel HD orig,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/9064/index.m3u8
+Hustler HD orig,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/9065/index.m3u8
+Redlight HD orig,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/9066/index.m3u8
+O-La-La orig,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/9068/index.m3u8
+Русская ночь orig,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/9344/index.m3u8
+Family Hookups,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/9345/index.m3u8
+EXXXOTICA HD orig,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/9346/index.m3u8
+Shot TV orig,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/9347/index.m3u8
+Eromania 4K,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/10049/index.m3u8
+EXTASY HD,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/11051/index.m3u8
+ОХ-АХ HD,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/11068/index.m3u8
+VF Cartoon 18+,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/11117/index.m3u8
+Alba 1 HD,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/12105/index.m3u8
+Alba 1,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/12106/index.m3u8
+Alba 2 HD,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/12107/index.m3u8
+Alba 2,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/12108/index.m3u8
+Alba 3,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/12109/index.m3u8
+Alba 4,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/12110/index.m3u8
+Alba 5,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/12111/index.m3u8
+BRAZZERS TV,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/12113/index.m3u8
+Super one HD,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/12121/index.m3u8
+Dirty Wives Club,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/12122/index.m3u8
+LEO TV FHD,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/12123/index.m3u8
+French Lover,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/12124/index.m3u8
+Meiden Van Holland,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/12125/index.m3u8
+Dirty Masseur,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/12128/index.m3u8
+DUSK TV,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/12129/index.m3u8
+DORCEL TV FHD,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/12131/index.m3u8
+Venus HD,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/12133/index.m3u8
+PLAYBOY TV,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/12135/index.m3u8
+PASSIE TV,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/12136/index.m3u8
+VERAPORN 4K,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/12137/index.m3u8
+Deep Throat Sirens,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/12138/index.m3u8
+Deep Lush,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/12139/index.m3u8
+VERAPORN TEENS 2,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/12140/index.m3u8
+VERAPORN ANAL,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/12143/index.m3u8
+Dancing Bear,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/12144/index.m3u8
+PINK EROTICA 1,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/12146/index.m3u8
+PINK EROTICA 2,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/12147/index.m3u8
+PINK EROTICA 3,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/12148/index.m3u8
+PINK EROTICA 4,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/12149/index.m3u8
+PINK EROTICA 5,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/12150/index.m3u8
+PINK EROTICA 6,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/12151/index.m3u8
+PINK EROTICA 7,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/12152/index.m3u8
+PINK EROTICA 8,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/12153/index.m3u8
+Dad Crush,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/12154/index.m3u8
+Family Swap,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/12155/index.m3u8
+TURKCE ALTAZILI YENI 2,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/12156/index.m3u8
+Cum4k UHD,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/12157/index.m3u8
+Cum Perfection,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/12158/index.m3u8
+MetArt FHD,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/12160/index.m3u8
+Bratty Sis,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/12161/index.m3u8
+Brand New Amateurs,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/12162/index.m3u8
+SL HOT 3 HD,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/12163/index.m3u8
+BBC Pie,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/12164/index.m3u8
+Barely Legal TV,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/12165/index.m3u8
+Bang POV,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/12166/index.m3u8
+Bang Bus,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/12167/index.m3u8
+Banana Fever,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/12168/index.m3u8
+Asshole Fever,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/12169/index.m3u8
+XXXINTERRACIAL TV,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/12171/index.m3u8
+LATINA TV,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/12172/index.m3u8
+POV TV,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/12175/index.m3u8
+ROUGH TV,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/12176/index.m3u8
+RUSSIAN TV,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/12177/index.m3u8
+TEEN TV,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/12178/index.m3u8
+THREESOME TV,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/12180/index.m3u8
+Anal Time,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/12181/index.m3u8
+Anal Teen Angels,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/12183/index.m3u8
+Anal Only,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/12184/index.m3u8
+HOTWIFE PREMIUM,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/12187/index.m3u8
+TUSHY TV,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/12188/index.m3u8
+Anal Mom,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/12189/index.m3u8
+Anal 4K,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/12190/index.m3u8
+BLACKED TV ELITE,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/12191/index.m3u8
+All Anal,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/12192/index.m3u8
+TRANS PREMIUM,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/12193/index.m3u8
+GAY PREMIUM,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/12204/index.m3u8
+21 Sextury,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/12205/index.m3u8
+YOSSO TV SEXY,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/14176/index.m3u8
+LIBERTY EROTIKA HD,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/16069/index.m3u8
+BCU Charm HD,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/18053/index.m3u8
+Kinoshka Adult HD,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/18060/index.m3u8
+Кино 18+ HD,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/18075/index.m3u8
+DE Blue Hustler,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/20023/index.m3u8
+DE Penthouse Passion HD,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/20025/index.m3u8
+DE Playboy Europe,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/20026/index.m3u8
+CineMan ExExEx,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/20089/index.m3u8
+CineMan ExExEx TWO,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/20090/index.m3u8
+StrahTV Adult TV HD,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/31707/index.m3u8
+StrahTV PlayBoyz TV HD,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/31709/index.m3u8
+StrahTV Ню Арт HD,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/31716/index.m3u8
+Drama,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/31700/index.m3u8
+KIN18+xxx,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/31707/index.m3u8
+XZ,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/31716/index.m3u8
+XZwm,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/31716/index.m3u8
+HORROR,http://a0bn5xro.rostelekom.xyz/iptv/7XBZV8CQEYWT3U/31708/index.m3u8
+
+Desire,http://88.212.7.11/live/test_desire_hd_hevc/playlist.m3u8
+Brazzers,http://88.212.7.11/live/test_brazzers_hd_hevc/playlist.m3u8
+Dorcel,http://88.212.7.11/live/test_dorcel_hd_hevc/playlist.m3u8
+Eroxxx,http://88.212.7.11/live/test_eroxxx_hd_hevc/playlist.m3u8
+Extasy,http://88.212.7.11/live/test_extasy_hd_hevc/playlist.m3u8
+Erox HD,http://88.212.7.11/live/test_erox_hd_hevc/playlist.m3u8
+Playboy HD,http://190.11.225.124:5000/live/playboy_hd/playlist.m3u8
+PassionXXX,https://5f22d76e220e1.streamlock.net/canale9/canale9/playlist.m3u8
+Leo HD,http://88.212.7.11/live/test_leo_hd_hevc/playlist.m3u8
+Reality Kings HD,http://88.212.7.11/live/test_realitykings_sd_hevc/playlist.m3u8
