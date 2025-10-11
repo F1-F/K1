@@ -1,90 +1,115 @@
-name: Sync Upstream Repository with Records
+name: Sync-2256569
 
 on:
-  workflow_dispatch:  # 触发方式：手动
   schedule:
-    - cron: '0 0 * * *'  # 每天午夜自动同步（可去除只用手动触发）
+    - cron: '0 5 * * *'   # 每天凌晨5点执行
+  workflow_dispatch:       # 支持手动触发
+  repository_dispatch:
+    types: sync-2256569
 
 jobs:
-  sync:
+  sync-2256569:
     runs-on: ubuntu-latest
     env:
-      TARGET_BRANCH: main         # 目标分支
-      UPSTREAM_BRANCH: main       # 上游分支（根据需求调整）
-      SYNC_BRANCH: sync-upstream  # 同步的临时分支
-      FINAL_BRANCH: 2256569       # 最终要推送的分支（你提到的“2256569”）
+      PAT: ${{ secrets.PAT }}
+
     steps:
-    - name: Checkout target repository
-      uses: actions/checkout@v3
-      with:
-        ref: ${{ env.TARGET_BRANCH }}
-        token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Checkout self
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
 
-    - name: Configure Git
-      run: |
-        git config user.name "github-actions"
-        git config user.email "github-actions@github.com"
+      # === 获取上游仓库最新 commit ===
+      - name: Get upstream latest commit
+        id: upstream_latest
+        run: |
+          echo "=== 获取上游仓库最新 commit ==="
+          if git ls-remote https://github.com/a2256569/tv.git &>/dev/null; then
+            git clone --depth 1 -b main https://github.com/a2256569/tv.git temp-upstream
+            cd temp-upstream
+            UPSTREAM_COMMIT=$(git rev-parse HEAD)
+            echo "UPSTREAM_COMMIT=$UPSTREAM_COMMIT" >> $GITHUB_OUTPUT
+            echo "上游最新提交：$UPSTREAM_COMMIT"
+            cd ..
+          else
+            echo "⚠️ 上游仓库不存在或无法访问，跳过同步"
+            echo "UPSTREAM_COMMIT=N/A" >> $GITHUB_OUTPUT
+            exit 0
+          fi
 
-    - name: Add upstream remote
-      run: |
-        git remote add upstream https://github.com/a2256569/tv.git
-        git fetch upstream
+      # === 检查上次同步记录 ===
+      - name: Check last sync
+        id: check_sync
+        run: |
+          LAST_SYNC_FILE=".last_sync_2256569"
+          LAST_UP_COMMIT=$(cat $LAST_SYNC_FILE 2>/dev/null || echo "none")
+          CUR_UP_COMMIT="${{ steps.upstream_latest.outputs.UPSTREAM_COMMIT }}"
 
-    - name: Check for upstream updates
-      id: check_update
-      run: |
-        # 获取上游最新commit
-        UPSTREAM_COMMIT=$(git rev-parse upstream/${{ env.UPSTREAM_BRANCH }})
-        # 获取上次同步存储的commit（在仓库中存放）
-        if [[ -f last_upstream_commit.txt ]]; then
-          LAST_UPSTREAM_COMMIT=$(cat last_upstream_commit.txt)
-        else
-          LAST_UPSTREAM_COMMIT=""
-        fi
+          if [ "$CUR_UP_COMMIT" = "N/A" ]; then
+            echo "⚠️ 上游不可访问，跳过同步"
+            echo "sync_needed=false" >> $GITHUB_OUTPUT
+            exit 0
+          fi
 
-        echo "Last upstream commit: $LAST_UPSTREAM_COMMIT"
-        echo "Current upstream commit: $UPSTREAM_COMMIT"
+          if [ "$LAST_UP_COMMIT" = "$CUR_UP_COMMIT" ]; then
+            echo "⏩ 上游无更新，停止运行"
+            echo "sync_needed=false" >> $GITHUB_OUTPUT
+            exit 0
+          fi
 
-        if [[ "$UPSTREAM_COMMIT" == "$LAST_UPSTREAM_COMMIT" ]]; then
-          echo "No new updates from upstream."
-          echo "::set-output name=update_needed::false"
-        else
-          echo "Updates found. Proceeding with sync."
-          echo "::set-output name=update_needed::true"
-          echo "$UPSTREAM_COMMIT" > last_upstream_commit.txt
-        fi
+          echo "上游有新提交，准备同步..."
+          echo "sync_needed=true" >> $GITHUB_OUTPUT
 
-    - name: Stop if no update
-      if: steps.check_update.outputs.update_needed == 'false'
-      run: echo "Upstream not updated. Exiting." && exit 0
+      # === 同步上游仓库到分支 2256569（仅上游有更新时执行） ===
+      - name: Sync upstream to 2256569 branch
+        if: steps.check_sync.outputs.sync_needed == 'true'
+        run: |
+          echo "=== 同步到 2256569 分支 ==="
+          rm -rf merged || true
+          mkdir merged
+          rsync -a --exclude='.git' temp-upstream/ merged/
 
-    - name: Create or update sync branch from upstream
-      run: |
-        # 创建临时分支并拉取上游内容
-        git checkout --detach upstream/${{ env.UPSTREAM_BRANCH }}
-        git checkout -B ${{ env.SYNC_BRANCH }}
+          cd merged
+          git init
+          git checkout -B 2256569
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
 
-    - name: Merge sync branch into target branch
-      run: |
-        # 切回目标分支
-        git checkout ${{ env.TARGET_BRANCH }}
+          # 添加 CHANGELOG.md 置顶记录
+          CHANGELOG_FILE="CHANGELOG.md"
+          NEW_ENTRY="* Sync from upstream(a2256569/tv:${{ steps.upstream_latest.outputs.UPSTREAM_COMMIT }}) at $(date '+%Y-%m-%d %H:%M:%S')"
+          if [ -f "$CHANGELOG_FILE" ]; then
+            echo -e "$NEW_ENTRY\n$(cat $CHANGELOG_FILE)" > $CHANGELOG_FILE
+          else
+            echo "$NEW_ENTRY" > $CHANGELOG_FILE
+          fi
 
-        # 检查目标分支是否已有相应同步分支，如果没有，创建
-        git fetch origin ${{ env.TARGET_BRANCH }}
+          git add .
+          if git diff --cached --quiet; then
+            echo "⏩ 没有检测到文件变化，跳过提交和推送"
+            exit 0
+          fi
 
-        # 合并上游内容到目标分支，保留提交历史
-        git merge --no-ff --log ${{ env.SYNC_BRANCH }} -m "Sync upstream commits from upstream/${{ env.UPSTREAM_BRANCH }}"
+          git commit -m "Sync upstream(a2256569/tv:${{ steps.upstream_latest.outputs.UPSTREAM_COMMIT }}) at $(date '+%Y-%m-%d %H:%M:%S')"
+          git remote add dest https://${{ github.actor }}:${{ secrets.PAT }}@github.com/${{ github.repository }}.git
+          git push --force dest 2256569
 
-        # 推送同步结果到远端
-        git push origin ${{ env.TARGET_BRANCH }}
+      # === 更新本地同步记录 ===
+      - name: Update last sync record
+        if: steps.check_sync.outputs.sync_needed == 'true'
+        run: |
+          echo "${{ steps.upstream_latest.outputs.UPSTREAM_COMMIT }}" > .last_sync_2256569
 
-    - name: Push the branch '2256569' with upstream history
-      run: |
-        # 如果要同步到特定分支（比如2256569）
-        git checkout -B ${{ env.FINAL_BRANCH }}
-        git push origin ${{ env.FINAL_BRANCH }} --force
 
-    - name: Save last upstream commit
-      if: success()
-      run: |
-        echo "$(git rev-parse upstream/${{ env.UPSTREAM_BRANCH }})" > last_upstream_commit.txt
+
+
+
+
+
+
+
+
+
+
+
+ChatGPT 也可能会犯错。请核查重要信息。
