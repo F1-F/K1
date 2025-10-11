@@ -1,157 +1,118 @@
-name: 22569
+ name: Sync Upstream to New Branch
 
 on:
   schedule:
     # 每天UTC时间2点自动检查（北京时间10点）
     - cron: '0 2 * * *'
   workflow_dispatch: # 允许手动触发
-    inputs:
-      branch_name:
-        description: '新分支名称'
-        required: true
-        default: '2256569'
-        type: string
-      force_sync:
-        description: '强制同步（即使没有更新）'
-        required: false
-        default: false
-        type: boolean
 
 jobs:
-  smart-sync:
+  sync-upstream:
     runs-on: ubuntu-latest
     
     steps:
-      # 步骤1: 检出当前仓库
-      - name: Checkout current repository
+      # 步骤1: 检出目标仓库
+      - name: Checkout target repository
         uses: actions/checkout@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          fetch-depth: 0  # 获取完整历史记录
+          fetch-depth: 0
+          ref: main
 
-      # 步骤2: 配置 Git 用户信息
+      # 步骤2: 配置 Git
       - name: Configure Git
         run: |
           git config user.name "GitHub Actions Bot"
           git config user.email "actions@users.noreply.github.com"
 
-      # 步骤3: 添加上游仓库并检查可用性
-      - name: Add upstream and check availability
-        id: upstream-check
+      # 步骤3: 检查上游仓库状态
+      - name: Check upstream repository status
+        id: check-upstream
         run: |
           # 添加上游仓库
           git remote add upstream https://github.com/a2256569/tv.git
           
-          # 尝试获取上游信息，设置超时防止长时间等待
-          timeout 30s git fetch upstream main || {
+          # 尝试访问上游仓库（设置超时）
+          echo "🔍 检查上游仓库状态..."
+          if timeout 30s git ls-remote upstream main &> /dev/null; then
+            echo "✅ 上游仓库可访问"
+            echo "upstream_accessible=true" >> $GITHUB_OUTPUT
+            
+            # 获取上游最新提交哈希
+            UPSTREAM_HASH=$(git ls-remote upstream main | cut -f1)
+            echo "上游最新提交: $UPSTREAM_HASH"
+            
+            # 检查目标分支是否存在
+            if git show-ref --verify --quiet refs/heads/2256569; then
+              # 获取目标分支当前提交
+              git checkout 2256569
+              CURRENT_HASH=$(git rev-parse HEAD)
+              echo "目标分支当前提交: $CURRENT_HASH"
+              
+              if [ "$UPSTREAM_HASH" = "$CURRENT_HASH" ]; then
+                echo "📭 没有检测到新更新"
+                echo "has_updates=false" >> $GITHUB_OUTPUT
+              else
+                echo "📬 检测到新更新!"
+                echo "has_updates=true" >> $GITHUB_OUTPUT
+              fi
+            else
+              echo "🌱 目标分支不存在，需要创建"
+              echo "has_updates=true" >> $GITHUB_OUTPUT
+            fi
+          else
             echo "❌ 上游仓库无法访问或已删除"
-            echo "skip_sync=true" >> $GITHUB_OUTPUT
             echo "upstream_accessible=false" >> $GITHUB_OUTPUT
-            exit 0
-          }
-          
-          echo "✅ 上游仓库可访问"
-          echo "upstream_accessible=true" >> $GITHUB_OUTPUT
-          
-          # 比较本地和上游的提交差异
-          UPSTREAM_HASH=$(git rev-parse upstream/main)
-          LOCAL_HASH=$(git rev-parse main)
-          
-          if [ "$UPSTREAM_HASH" = "$LOCAL_HASH" ]; then
-            echo "📭 没有检测到新更新，哈希值相同: $UPSTREAM_HASH"
-            echo "skip_sync=true" >> $GITHUB_OUTPUT
-          else
-            echo "📬 检测到新更新!"
-            echo "本地哈希: $LOCAL_HASH"
-            echo "上游哈希: $UPSTREAM_HASH"
-            echo "skip_sync=false" >> $GITHUB_OUTPUT
+            echo "has_updates=false" >> $GITHUB_OUTPUT
           fi
 
-      # 步骤4: 条件执行 - 只在有更新时同步
-      - name: Sync upstream changes
-        if: steps.upstream-check.outputs.skip_sync == 'false' && steps.upstream-check.outputs.upstream_accessible == 'true'
+      # 步骤4: 同步上游更新（仅在检测到更新时执行）
+      - name: Sync upstream updates
+        if: steps.check-upstream.outputs.upstream_accessible == 'true' && steps.check-upstream.outputs.has_updates == 'true'
         run: |
-          echo "🔄 开始同步上游更新..."
-          git checkout main
+          echo "🔄 开始同步上游更新到分支 2256569..."
           
-          # 使用 rebase 方式合并，保持历史整洁
-          git rebase upstream/main
+          # 获取上游所有内容
+          git fetch upstream --tags
           
-          # 推送更新
-          git push origin main
+          # 创建或切换到目标分支
+          git checkout -B 2256569 upstream/main
+          
+          # 推送分支到目标仓库
+          git push --force origin 2256569
           git push --tags --force origin
-          echo "✅ 同步完成"
-
-      # 步骤5: 创建或更新分支（只在有同步时执行）
-      - name: Create or update branch
-        if: steps.upstream-check.outputs.skip_sync == 'false' && steps.upstream-check.outputs.upstream_accessible == 'true'
-        run: |
-          NEW_BRANCH="${{ github.event.inputs.branch_name || '比2256569' }}"
           
-          # 检查分支是否存在
-          if git show-ref --verify --quiet refs/heads/$NEW_BRANCH; then
-            echo "🔄 更新已存在的分支: $NEW_BRANCH"
-            git checkout $NEW_BRANCH
-            git rebase main  # 将主分支的更新rebase到特性分支
-            git push --force-with-lease origin $NEW_BRANCH
-          else
-            echo "🌱 创建新分支: $NEW_BRANCH"
-            git checkout -b $NEW_BRANCH
-            git push -u origin $NEW_BRANCH
-          fi
-          echo "✅ 分支处理完成: $NEW_BRANCH"
+          echo "✅ 同步完成！分支 2256569 已更新"
+
+      # 步骤5: 处理无需更新的情况
+      - name: Skip when no updates
+        if: steps.check-upstream.outputs.upstream_accessible == 'true' && steps.check-upstream.outputs.has_updates == 'false'
+        run: |
+          echo "✅ 无需同步 - 分支 2256569 已是最新"
+          echo "上游仓库: a2256569/tv"
+          echo "目标分支: F1-F/K1:2256569"
+          echo "检查时间: $(date)"
 
       # 步骤6: 处理上游不可用的情况
       - name: Handle upstream unavailable
-        if: steps.upstream-check.outputs.upstream_accessible == 'false'
+        if: steps.check-upstream.outputs.upstream_accessible == 'false'
         run: |
           echo "🚫 上游仓库无法访问，跳过同步"
-          echo "这可能是因为:"
-          echo "1. 上游仓库已删除"
-          echo "2. 网络连接问题"
-          echo "3. 仓库权限变更"
-          echo "请检查上游仓库状态: https://github.com/a2256569/tv"
+          echo "可能原因:"
+          echo "- 上游仓库已删除"
+          echo "- 网络连接问题"
+          echo "- 仓库权限变更"
+          echo "请检查: https://github.com/a2256569/tv"
 
-      # 步骤7: 处理无更新的情况
-      - name: Handle no updates
-        if: steps.upstream-check.outputs.skip_sync == 'true' && steps.upstream-check.outputs.upstream_accessible == 'true'
+      # 步骤7: 状态报告
+      - name: Final report
         run: |
-          echo "✅ 检查完成 - 无需同步"
-          echo "本地仓库已是最新状态"
-          echo "上游仓库: a2256569/tv"
+          echo "================================="
+          echo "📊 同步作业完成报告"
+          echo "================================="
+          echo "上游仓库: ${{ steps.check-upstream.outputs.upstream_accessible == 'true' && '可访问 ✅' || '不可访问 ❌' }}"
+          echo "同步状态: ${{ steps.check-upstream.outputs.has_updates == 'true' && '已执行 🔄' || '已跳过 ⏸️' }}"
           echo "目标仓库: F1-F/K1"
-          echo "检查时间: $(date)"
-
-      # 步骤8: 强制同步选项（手动触发时可用）
-      - name: Force sync when requested
-        if: github.event_name == 'workflow_dispatch' && github.event.inputs.force_sync == 'true'
-        run: |
-          echo "🔨 强制执行强制同步..."
-          git checkout main
-          git reset --hard upstream/main
-          git push --force origin main
-          
-          # 更新分支
-          NEW_BRANCH="${{ github.event.inputs.branch_name || '2256569' }}"
-          if git show-ref --verify --quiet refs/heads/$NEW_BRANCH; then
-            git checkout $NEW_BRANCH
-            git reset --hard main
-            git push --force origin $NEW_BRANCH
-          else
-            git checkout -b $NEW_BRANCH
-            git push -u origin $NEW_BRANCH
-          fi
-          echo "✅ 强制同步完成"
-
-      # 步骤9: 最终状态报告
-      - name: Final status report
-        run: |
-          echo "================================="
-          echo "📊 同步作业状态报告"
-          echo "================================="
-          echo "上游仓库状态: ${{ steps.upstream-check.outputs.upstream_accessible == 'true' && '可访问' || '不可访问' }}"
-          echo "同步执行状态: ${{ steps.upstream-check.outputs.skip_sync == 'false' && '已执行' || '已跳过' }}"
-          echo "触发方式: ${{ github.event_name }}"
+          echo "目标分支: 2256569"
           echo "执行时间: $(date)"
-          echo "作业结果: ${{ job.status }}"
           echo "================================="
