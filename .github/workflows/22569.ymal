@@ -1,0 +1,101 @@
+Sync-2256569 
+
+on:
+  schedule:
+    - cron: '0 5 * * *'   # 每天凌晨5点执行
+  workflow_dispatch:       # 支持手动触发
+  repository_dispatch:
+    types: sync-2256569
+
+jobs:
+  sync-2256569:
+    runs-on: ubuntu-latest
+    env:
+      PAT: ${{ secrets.PAT }}
+
+    steps:
+      - name: Checkout self
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      # === 获取上游仓库最新 commit ===
+      - name: Get upstream latest commit
+        id: upstream_latest
+        run: |
+          echo "=== 获取上游仓库最新 commit ==="
+          if git ls-remote https://github.com/a2256569/tv.git &>/dev/null; then
+            git clone --depth 1 -b main https://github.com/a2256569/tv.git temp-upstream
+            cd temp-upstream
+            UPSTREAM_COMMIT=$(git rev-parse HEAD)
+            echo "UPSTREAM_COMMIT=$UPSTREAM_COMMIT" >> $GITHUB_OUTPUT
+            echo "上游最新提交：$UPSTREAM_COMMIT"
+            cd ..
+          else
+            echo "⚠️ 上游仓库不存在或无法访问，跳过同步"
+            echo "UPSTREAM_COMMIT=N/A" >> $GITHUB_OUTPUT
+            exit 0
+          fi
+
+      # === 检查上次同步记录 ===
+      - name: Check last sync
+        id: check_sync
+        run: |
+          LAST_SYNC_FILE=".last_sync_2256569"
+          LAST_UP_COMMIT=$(cat $LAST_SYNC_FILE 2>/dev/null || echo "none")
+          CUR_UP_COMMIT="${{ steps.upstream_latest.outputs.UPSTREAM_COMMIT }}"
+
+          if [ "$CUR_UP_COMMIT" = "N/A" ]; then
+            echo "⚠️ 上游不可访问，跳过同步"
+            echo "sync_needed=false" >> $GITHUB_OUTPUT
+            exit 0
+          fi
+
+          if [ "$LAST_UP_COMMIT" = "$CUR_UP_COMMIT" ]; then
+            echo "⏩ 上游无更新，停止运行"
+            echo "sync_needed=false" >> $GITHUB_OUTPUT
+            exit 0
+          fi
+
+          echo "上游有新提交，准备同步..."
+          echo "sync_needed=true" >> $GITHUB_OUTPUT
+
+      # === 同步上游仓库到分支 2256569（仅上游有更新时执行） ===
+      - name: Sync upstream to 2256569 branch
+        if: steps.check_sync.outputs.sync_needed == 'true'
+        run: |
+          echo "=== 同步到 2256569 分支 ==="
+          rm -rf merged || true
+          mkdir merged
+          rsync -a --exclude='.git' temp-upstream/ merged/
+
+          cd merged
+          git init
+          git checkout -B 2256569
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          # 添加 CHANGELOG.md 置顶记录
+          CHANGELOG_FILE="CHANGELOG.md"
+          NEW_ENTRY="* Sync from upstream(a2256569/tv:${{ steps.upstream_latest.outputs.UPSTREAM_COMMIT }}) at $(date '+%Y-%m-%d %H:%M:%S')"
+          if [ -f "$CHANGELOG_FILE" ]; then
+            echo -e "$NEW_ENTRY\n$(cat $CHANGELOG_FILE)" > $CHANGELOG_FILE
+          else
+            echo "$NEW_ENTRY" > $CHANGELOG_FILE
+          fi
+
+          git add .
+          if git diff --cached --quiet; then
+            echo "⏩ 没有检测到文件变化，跳过提交和推送"
+            exit 0
+          fi
+
+          git commit -m "Sync upstream(a2256569/tv:${{ steps.upstream_latest.outputs.UPSTREAM_COMMIT }}) at $(date '+%Y-%m-%d %H:%M:%S')"
+          git remote add dest https://${{ github.actor }}:${{ secrets.PAT }}@github.com/${{ github.repository }}.git
+          git push --force dest 2256569
+
+      # === 更新本地同步记录 ===
+      - name: Update last sync record
+        if: steps.check_sync.outputs.sync_needed == 'true'
+        run: |
+          echo "${{ steps.upstream_latest.outputs.UPSTREAM_COMMIT }}" > .last_sync_2256569
