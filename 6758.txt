@@ -1,0 +1,24 @@
+[
+  {
+    "name": "更新升级",
+    "list": [
+      {
+        "name": "神州本地包",
+        "url": "https://gitee.com/yiwu369/6758/raw/master/神州.zip",
+        "icon": "https://gitee.com/yiwu369/6758/raw/master/招财进宝.jpg",
+        "version": "点击更新03_24"
+      }
+    ]
+  },
+  {
+    "name": "神州更新",
+    "list": [
+      {
+        "name": "神州本地",
+        "url": "https://gitee.com/yiwu369/6758/raw/master/神州.zip",
+        "icon": "https://gitee.com/yiwu369/6758/raw/master/招财进宝.jpg",
+        "version": "点击更新03_24"
+      }
+    ]
+  }
+]
